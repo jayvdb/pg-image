@@ -29,7 +29,10 @@ configuration:
 targets:
   - Dockerfile: Dockerfile.jj2
   - .dockerfile_lint_rules.yaml: dockerfile_lint_rules.yaml.jj2
+  - .gitlab-ci.yml: gitlab-ci.yml.jj2
+  - .travis.yml: travis.yml.jj2
 copy:
   - .coafile: .coafile
   - .gitignore: .gitignore
   - docker-healthcheck: postgres/docker-healthcheck
+  - hooks/build: hooks/build
